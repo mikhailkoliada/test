@@ -6,8 +6,8 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Run a multi-line script
         run: |
-          gcc -v -xc++ /dev/null -fsyntax-only
+          printenv
