@@ -26,9 +26,9 @@ steps:
     EDGEDRIVER_DIR="/usr/local/share/edge_driver"
     EDGEDRIVER_BIN="$EDGEDRUVER_DIR/edgedriver"
 
-    mkdir -p $EDGEDRIVER_DIR
+    sudo mkdir -p $EDGEDRIVER_DIR
 
-    unzip -qq /tmp/edgedriver_linux64.zip -d $EDGEDRIVER_DIR
+    sudo unzip -qq /tmp/edgedriver_linux64.zip -d $EDGEDRIVER_DIR
 
     ls -la $EDGEDRIVER_DIR
 
