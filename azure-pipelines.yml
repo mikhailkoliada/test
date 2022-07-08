@@ -24,7 +24,7 @@ steps:
     wget $EDGE_DRIVER_URL -P /tmp
 
     EDGEDRIVER_DIR="/usr/local/share/edge_driver"
-    EDGEDRIVER_BIN="$EDGEDRUVER_DIR/msedgedriver"
+    EDGEDRIVER_BIN="$EDGEDRIVER_DIR/msedgedriver"
 
     sudo mkdir -p $EDGEDRIVER_DIR
 
