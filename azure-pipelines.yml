@@ -11,6 +11,5 @@ pool:
 
 steps:
 - script: |
-    printenv
-    systemctl --user
+    microsoft-edge --version
   displayName: 'Run a multi-line script'
