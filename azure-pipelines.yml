@@ -36,7 +36,7 @@ steps:
 
     msedgedriver --version
 
-    sudo echo "EDGEWEBDRIVER=$EDGEDRIVER_DIR" | tee -a /etc/environment
+    sudo echo "EDGEWEBDRIVER=$EDGEDRIVER_DIR" | sudo tee -a /etc/environment
 
     sudo cat /etc/environment
 
