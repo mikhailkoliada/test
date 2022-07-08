@@ -24,14 +24,19 @@ steps:
     wget $EDGE_DRIVER_URL -P /tmp
 
     EDGEDRIVER_DIR="/usr/local/share/edge_driver"
-    EDGEDRIVER_BIN="$EDGEDRUVER_DIR/edgedriver"
+    EDGEDRIVER_BIN="$EDGEDRUVER_DIR/msedgedriver"
 
     sudo mkdir -p $EDGEDRIVER_DIR
 
     sudo unzip -qq /tmp/edgedriver_linux64.zip -d $EDGEDRIVER_DIR
 
-    ls -la $EDGEDRIVER_DIR
+    sudo chmod +x $EDGEDRIVER_BIN
 
+    sudo ln -s $EDGEDRIVER_BIN /usr/bin
+
+    msedgedriver --version
+
+    echo "EDGEWEBDRIVER=$EDGEDRIVER_DIR" | tee -a /etc/environment
 
 
   displayName: 'Run a multi-line script'
