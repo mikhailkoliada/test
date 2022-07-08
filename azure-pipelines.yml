@@ -36,7 +36,9 @@ steps:
 
     msedgedriver --version
 
-    echo "EDGEWEBDRIVER=$EDGEDRIVER_DIR" | tee -a /etc/environment
+    sudo echo "EDGEWEBDRIVER=$EDGEDRIVER_DIR" | tee -a /etc/environment
+
+    sudo cat /etc/environment
 
 
   displayName: 'Run a multi-line script'
