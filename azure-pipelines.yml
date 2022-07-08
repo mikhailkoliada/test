@@ -11,5 +11,16 @@ pool:
 
 steps:
 - script: |
-    microsoft-edge --version
+    EDGE_VERSION=$(microsoft-edge --version | cut -d' ' -f 3)
+    EDGE_VERSION_MAJOR=$(echo $EDGE_VERSION | cut -d'.' -f 1)
+
+    echo "Version of Microsoft Edge: ${EDGE_VERSION}"
+
+    EDGE_DRIVER_VERSION_URL="https://msedgedriver.azureedge.net/LATEST_RELEASE_${EDGE_VERSION_MAJOR}_LINUX"
+    EDGE_DRIVER_LATEST_VERSION=$(curl -s "$EDGE_DRIVER_VERSION_URL" | iconv -f utf-16 -t utf-8 | tr -d '\r')
+
+    EDGE_DRIVER_URL="https://msedgedriver.azureedge.net/${EDGE_DRIVER_LATEST_VERSION}/edgedriver_linux64.zip"
+
+    wget $EDGE_DRIVER_URL -P /tmp
+
   displayName: 'Run a multi-line script'
