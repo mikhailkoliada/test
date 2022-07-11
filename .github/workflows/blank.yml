@@ -21,7 +21,7 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            sudo tcpdump -nn -i any port 123 -w sntp.cap &
+            sudo tcpdump -nn -i any -w sntp.cap &
             sleep 1
             docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/sampleapp:${{ github.sha }}
