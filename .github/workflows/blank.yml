@@ -39,8 +39,8 @@ jobs:
             location: 'west us'
             
         - name: Upload capture
-        if: always()
-        run: |
+          if: always()
+          run: |
             sleep 1
             sudo kill -2 $(pgrep tcpdump)
             sleep 1
