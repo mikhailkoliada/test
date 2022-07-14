@@ -25,4 +25,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: check pkgconfig
-        run: pkg-config --cflags-only-I libedit
+        run: |
+          export PKG_CONFIG_PATH="$(xcode-select -p)"
+          pkg-config --cflags-only-I libedit
