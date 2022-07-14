@@ -27,4 +27,5 @@ jobs:
       - name: check pkgconfig
         run: |
           export PKG_CONFIG_PATH="$(xcode-select -p)"
+          printenv
           pkg-config --cflags-only-I libedit
