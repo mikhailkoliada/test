@@ -11,7 +11,7 @@ pool:
 
 steps:
 - script: |
-   pkg-config --cflags-only-I libedit
+   dtrace pkg-config --cflags-only-I libedit
 
 
   displayName: 'Run a multi-line script'
