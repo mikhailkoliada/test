@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: macos-internal-10.15
+  vmImage: internal-macos-10.15
 
 steps:
 - script: |
