@@ -11,7 +11,7 @@ pool:
 
 steps:
 - script: |
-   printenv
+   pkg-config --cflags-only-I libedit
 
 
   displayName: 'Run a multi-line script'
