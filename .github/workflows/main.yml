@@ -29,4 +29,4 @@ jobs:
           ldd /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
           file /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
           readelf -d /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
-          strace -o out.txt /opt/hostedtoolcache/Python/3.10.5/x64/bin/python --version;  grep -v "1 ENOENT" out.txt 
+          strace -o out.txt /opt/hostedtoolcache/Python/3.10.5/x64/bin/python --version; cat out.txt | grep -v "1 ENOENT" | grep "libpython3.10.so.1.0" 
