@@ -29,4 +29,4 @@ jobs:
           ldd /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
           file /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
           readelf -d /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
-          strace /opt/hostedtoolcache/Python/3.10.5/x64/bin/python --version
+          strace /opt/hostedtoolcache/Python/3.10.5/x64/bin/python --version | grep -v "-1 ENOENT" 
