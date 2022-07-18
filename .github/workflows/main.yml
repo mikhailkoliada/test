@@ -27,3 +27,4 @@ jobs:
       - name: check pkgconfig
         run: |
           ldd /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
+          file /opt/hostedtoolcache/Python/3.10.5/x64/bin/python
