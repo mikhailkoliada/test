@@ -32,4 +32,3 @@ jobs:
           ls -la /tmp
           sudo cp /tmp/kubernetes/client/bin/kubectl /usr/local/bin
           sudo chmod +x /usr/local/bin/kubectl
-          sudo kubectl --version
