@@ -29,6 +29,7 @@ jobs:
           sudo rm -frv $(which kubectl)
           sudo wget https://dl.k8s.io/v1.24.2/kubernetes-client-darwin-amd64.tar.gz -P /tmp
           sudo tar -xvpf /tmp/kubernetes-client-darwin-amd64.tar.gz
+          ls -la /tmp
           sudo cp /tmp/kubernetes/client/bin/kubectl /usr/local/bin
           sudo chmod +x /usr/local/bin/kubectl
           sudo kubectl --version
