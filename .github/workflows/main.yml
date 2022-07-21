@@ -18,7 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: macos-10.15
+    runs-on: ubuntu-18.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,9 +26,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: check pkgconfig
         run: |
-          sudo rm -frv $(which kubectl)
-          sudo wget https://dl.k8s.io/v1.24.2/kubernetes-client-darwin-amd64.tar.gz -P /tmp
-          sudo tar -xvpf /tmp/kubernetes-client-darwin-amd64.tar.gz -C /tmp
-          ls -la /tmp
-          sudo cp /tmp/kubernetes/client/bin/kubectl /usr/local/bin
-          sudo chmod +x /usr/local/bin/kubectl
+         sudo grep cgroup /proc/filesystems
