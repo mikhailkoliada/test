@@ -24,6 +24,6 @@ jobs:
     steps:
 
       # Runs a single command using the runners shell
-      - name: check pkgconfig
+      - name: check space
         run: |
-         sudo grep cgroup /proc/filesystems
+         sudo df -h /
