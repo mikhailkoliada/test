@@ -27,4 +27,4 @@ jobs:
       - name: check space
         run: |
          sudo apt install quota
-         sudo quota -v
+         sudo repquota /dev/root
