@@ -27,4 +27,4 @@ jobs:
       - name: check space
         run: |
          sudo apt install quota
-         sudo cat /etc/fstab
+         sudo repquota -a
