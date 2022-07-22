@@ -26,4 +26,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: check space
         run: |
+         sudo apt install quota
          sudo repquota -s /
+         sudo cat /etc/fstab
