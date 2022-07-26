@@ -10,7 +10,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - run: screencapture -T10 -V 10 foo.mov
+    - run: screencapture -T30 -V 30 foo.mov
     - uses: actions/upload-artifact@v3
       with:
         name: latest
