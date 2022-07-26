@@ -11,4 +11,4 @@ jobs:
 
     steps:
     - run: |
-        sudo tune2fs -l /dev/partition  | grep 'Reserved'
+        sudo tune2fs -l /dev/root  | grep 'Reserved'
