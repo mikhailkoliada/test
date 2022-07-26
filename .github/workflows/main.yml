@@ -7,11 +7,8 @@ on:
 
 jobs:
   latest:
-    runs-on: macos-latest
+    runs-on: ubuntu-20.04
 
     steps:
-    - run: screencapture -T30 -V 30 foo.mov
-    - uses: actions/upload-artifact@v3
-      with:
-        name: latest
-        path: foo.mov
+    - run: |
+        sudo tune2fs -l /dev/partition  | grep 'Reserved'
