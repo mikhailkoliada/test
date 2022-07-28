@@ -11,4 +11,4 @@ jobs:
 
     steps:
     - run: |
-        sudo ls -la /
+        sudo ls -lah /
